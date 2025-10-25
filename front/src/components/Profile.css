@@ -1,0 +1,139 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden; /* prevent scroll */
+}
+
+/* Full-screen container */
+.landing-bg {
+    
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* full viewport height */
+  width: 100vw;  /* full viewport width */
+  background: linear-gradient(135deg, #1f0538 0%, #262636 100%);
+  color: #fff;
+}
+
+/* Navbar at top */
+.landing-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #44295d 0%, #262636 100%);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+
+.navbar-logo {
+  font-weight: 100;
+  font-size: 0.8rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-links a {
+  margin-left: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #4b1f7f;
+}
+
+/* Content Split: fill remaining height */
+.landing-content {
+  display: flex;
+  flex: 1; /* fill remaining vertical space */
+  overflow: hidden;
+}
+
+/* Left Section */
+.landing-left {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.landing-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.landing-left p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+/* Right Section */
+.landing-right {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: transparent; /* remove solid dark color */
+  height: 100%;
+  border-left: none; /* optional: remove the border to keep unified look */
+  border-top-left-radius: 0;   /* optional: remove corner radius */
+}
+
+
+.landing-right h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.landing-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.landing-form input {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #4b4b5c;
+  color: #fff;
+}
+
+.landing-form input::placeholder {
+  color: #ccc;
+}
+
+.landing-form button {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #4b1f7f;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.landing-form button:hover {
+  background-color: #6b33a1;
+}
+
+.landing-form p {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.landing-form a {
+  color: #4b1f7f;
+  font-weight: 600;
+  text-decoration: none;
+}
