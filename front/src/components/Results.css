@@ -1,66 +1,49 @@
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.results-bg {
-  position: auto;
-  top: 0;
-  left: 187px; /* Sidebar width */
-  width: calc(100% - 187px);
-  height: 100vh;
-  padding: 1.5rem;
-  background-color: #2c2c3c;
-  color: #fff;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Poppins', sans-serif;
-}
+/* Results page scoped styles */
+.results { width:100%; max-width:1100px; margin:0 auto; color:#fff; font-family:'Poppins', sans-serif; }
+.res-header { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1.1rem; }
+.res-header h2 { margin:0; font-size:1.5rem; }
+.header-actions { display:flex; gap:.6rem; }
 
-.results-bg h2 {
-  font-weight: 700;
-  margin-bottom: 1rem;
-  font-family: 'Poppins', sans-serif;
-}
+.btn { display:inline-flex; align-items:center; gap:.45rem; padding:.55rem .9rem; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:rgba(255,255,255,.06); color:#fff; cursor:pointer; transition:.2s ease; font-size:.9rem; }
+.btn:hover { background:rgba(255,255,255,.12); }
+.btn.primary { background:linear-gradient(135deg,#4b1f7f,#764ba2); border-color:transparent; box-shadow:0 6px 18px rgba(118,75,162,.35); }
+.btn.w-full { width:100%; justify-content:center; }
+.btn.ghost { background:transparent; }
 
-.results-card {
-  background-color: #3a3a4d;
-  width: 100%;
-  max-width: 900px;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  font-family: 'Poppins', sans-serif;
-}
+.res-grid { display:grid; grid-template-columns: 1.4fr .6fr; gap:1rem; }
+.res-card { background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04)); border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:1.1rem 1.2rem; box-shadow:0 6px 24px rgba(0,0,0,.35); }
+.res-card.main { display:flex; flex-direction:column; gap:.9rem; }
+.span-2 { grid-column: span 2; }
 
-.pie-chart-placeholder {
-  height: 250px;
-  background-color: #4b1f7f;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  margin: 1rem 0;
-}
+.sentence-wrap h3 { margin:.2rem 0 .4rem; font-size:1.05rem; }
+.sentence { margin:0; font-size:.95rem; line-height:1.4; background:rgba(255,255,255,.06); padding:.7rem .8rem; border-radius:10px; border:1px solid rgba(255,255,255,.12); }
+.sentence-actions { margin-top:.5rem; display:flex; gap:.6rem; }
 
-.download-btn {
-  padding: 0.6rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #4b1f7f;
-  color: #fff;
-  font-weight: 600;
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+.meta-row { display:flex; flex-wrap:wrap; gap:1.1rem; font-size:.85rem; }
+.meta strong { font-weight:600; }
 
-.download-btn:hover {
-  background-color: #6b33a1;
+.badge { padding:.3rem .7rem; border-radius:999px; font-size:.75rem; font-weight:600; letter-spacing:.5px; }
+.badge.biased { background:rgba(220,64,87,.18); color:#ff8aa1; border:1px solid rgba(220,64,87,.35); }
+.badge.neutral { background:rgba(46,204,113,.18); color:#a8e6bf; border:1px solid rgba(46,204,113,.35); }
+
+.reason h4, .suggestions h4 { margin:.2rem 0 .4rem; font-size:.95rem; }
+.suggestions ul { margin:.2rem 0 0; padding-left:1.1rem; display:flex; flex-direction:column; gap:.3rem; }
+.suggestions li { font-size:.85rem; }
+
+/* Donut chart */
+.chart h3 { margin:.2rem 0 .6rem; font-size:1.05rem; }
+.donut { display:block; margin:0 auto; }
+.donut-label { font-size:.9rem; fill:#fff; font-weight:600; }
+.confidence-note { text-align:center; font-size:.75rem; opacity:.75; margin-top:.4rem; }
+
+/* Export actions card */
+.res-card.actions h3 { margin:.2rem 0 .8rem; font-size:1.05rem; }
+.res-card.actions { display:flex; flex-direction:column; gap:.6rem; }
+
+@media (max-width: 900px) {
+  .res-grid { grid-template-columns: 1fr; }
+  .span-2 { grid-column: auto; }
 }

@@ -9,6 +9,7 @@ import Results from "./components/Results";
 import Profile from "./components/Profile"; 
 import Settings from "./components/Settings";
 import About from "./components/About"; // <-- import About page
+import ForgotPassword from "./components/ForgotPassword"; // <-- import ForgotPassword page
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/about" element={<About />} /> {/* <-- About page route */}
+        <Route path="/forgot-password" element={<ForgotPassword />} /> {/* <-- ForgotPassword page route */}
 
         {/* Main app with sidebar */}
         <Route path="/home" element={<Home />}>
